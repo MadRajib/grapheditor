@@ -121,15 +121,12 @@ onload = function () {
 
     $("#addDataStoreBtn").click(function() {
         let dataStore1 = createDataStore("1st")
-        dataStore1.drag(move, start, stop);
-        
+        dataStore1.drag(move, start, stop); 
     });
 
     $("#addArrowBtn").click(function() {
         let arrow1 =createArrow("1st")
         arrow1.drag(move, start, stop);
-        
-        
     });
 
 }

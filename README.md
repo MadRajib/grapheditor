@@ -155,4 +155,26 @@ which is called by the browser when our whole document is loaded!.<br>
      entity1.drag(move, start, stop);
     ```
     Same way we have added this functionality each shape.<br>
-    Now our shape is draggable!
+   
+    ```javascript
+    $("#addEntityBtn").click(function() {
+        let entity1 = createEntity("1st")
+        entity1.drag(move, start, stop);
+    });
+
+    $("#addProcessBtn").click(function() {
+        let proces1 = createProcess("1st")
+        proces1.drag(move, start, stop);
+    });
+
+    $("#addDataStoreBtn").click(function() {
+        let dataStore1 = createDataStore("1st")
+        dataStore1.drag(move, start, stop); 
+    });
+
+    $("#addArrowBtn").click(function() {
+        let arrow1 =createArrow("1st")
+        arrow1.drag(move, start, stop);
+    });
+    ```
+     Now our shapes is draggable!
