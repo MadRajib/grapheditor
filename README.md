@@ -116,12 +116,12 @@ which is called by the browser when our whole document is loaded!.<br>
 
     ```
 
-    * Here _s.rect(x,y,width, height)_ is used to draw a rectangle to the _#svg_ element.
-    * _element.attrb({ key:value })_ is used to set style to the drawn element.
-    * _s.g(enity1,lable)_ is used to group two elements together , now they will behave as same element.
+    *  __s.rect(x,y,width, height)__ is used to draw a rectangle to the _#svg_ element.
+    * __element.attrb({ key:value })__ is used to set style to the drawn element.
+    * __s.g(enity1,lable)__ is used to group two elements together , now they will behave as same element.
 
-    * _s.circle(x,y,width,height)_ to draw circle.
-    * _s.text(x,y)_ to draw text.
-    * _s.line(x1,y1, x2,y2)_ to draw a line segement.
-    * _s.polyline(x1,y1, x2,y2, x3,y3 ,....)_  to draw continuous lines.
+    * __s.circle(x,y,width,height)__ to draw circle.
+    * __s.text(x,y)__ to draw text.
+    * __s.line(x1,y1, x2,y2)__ to draw a line segement.
+    * __s.polyline(x1,y1, x2,y2, x3,y3 ,....)__  to draw continuous lines.
 
