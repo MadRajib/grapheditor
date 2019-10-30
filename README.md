@@ -125,3 +125,34 @@ which is called by the browser when our whole document is loaded!.<br>
     * __s.line(x1,y1, x2,y2)__ to draw a line segement.
     * __s.polyline(x1,y1, x2,y2, x3,y3 ,....)__  to draw continuous lines.
 
+4.  To add dragging capability to our shapes we will use<br>
+    __Element.drag(onmove, onstart, onend)__ function
+    * _onmove_ is a function called when the element is moved!
+    * onstart is called when the dragging starts.
+    * onend is called when dragging is finished.
+
+    In our code we have :
+    ```javascript
+    var move = function (dx, dy) {
+        this.attr({
+            transform: this.data('origTransform') + (this.data('origTransform') ? "T" : "t") + [dx, dy]
+        });
+    }
+
+    var start = function () {
+        this.data('origTransform', this.transform().local);
+    }
+    var stop = function () {
+        console.log('finished dragging');
+    }
+
+    ```
+
+    which we have passed to:
+
+    ```javascript
+    // For entity
+     entity1.drag(move, start, stop);
+    ```
+    Same way we have added this functionality each shape.<br>
+    Now our shape is draggable!
