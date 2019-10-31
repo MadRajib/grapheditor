@@ -65,10 +65,20 @@ onload = function () {
             'font-size':20,
             text:""
         });
-    
-        return s.g(process,processlable)
+        g = s.g(process,processlable)
 
-    }
+        g.dblclick(()=>{
+            console.log("dbl")
+            let doc = prompt("Type Desired label", 
+                "Entity");
+                if (doc != null){
+                    entitylable.attr({
+                        text:doc,
+                    });
+                }  
+        return g
+                }
+        }
     // Create Data Store
     function createDataStore(lable){
         let shp = s.rect(100, 100,180, 60),
