@@ -70,14 +70,15 @@ onload = function () {
         g.dblclick(()=>{
             console.log("dbl")
             let doc = prompt("Type Desired label", 
-                "Entity");
+                "process");
                 if (doc != null){
-                    entitylable.attr({
+                    processlable.attr({
                         text:doc,
                     });
-                }  
-        return g
                 }
+                });
+        return g
+                
         }
     // Create Data Store
     function createDataStore(lable){
@@ -94,8 +95,20 @@ onload = function () {
             'font-size':20,
             text:""
         });
+        g = s.g(shp,lb)
+
+        g.dblclick(()=>{
+            console.log("dbl")
+            let doc = prompt("Type Desired label", 
+                "datastore");
+                if (doc != null){
+                    lb.attr({
+                        text:doc,
+                    });
+                }
+                });
     
-        return s.g(shp,lb)
+        return g
 
     }
 
@@ -103,6 +116,7 @@ onload = function () {
         let rhl = s.circle(100-20,100,10,10)
         let shp = s.line(100+10, 100,300, 100)
         var Triangle = s.polyline("100,100 120,120 120,80");
+        let lntxt= s.text(100+60,100-10)
         Triangle.attr({
           fill: "#000",
           
@@ -116,7 +130,11 @@ onload = function () {
             strokeWidth: 5,
             stroke:"#000",
         });
-        g =  s.g(shp,Triangle,rhl);
+        lntxt.attr({
+            'font-size':20,
+            text:""
+        });
+        g =  s.g(shp,Triangle,rhl,lntxt);
         g.click(function () {
            let e =  g.select("circle")
            console.log(e)
@@ -125,6 +143,16 @@ onload = function () {
                 visibility:"visible",
             })
          });        
+         g.dblclick(()=>{
+            console.log("dbl")
+            let doc = prompt("Type Desired label", 
+                "arrow");
+                if (doc != null){
+                    lntxt.attr({
+                        text:doc,
+                    });
+                }
+                });
     
         return g
 
