@@ -32,10 +32,23 @@ onload = function () {
         });
         entitylable.attr({
             'font-size':20,
-            text:"Entity"
+            text:""
         });
-    
-        return s.g(entity,entitylable)
+
+        g = s.g(entity,entitylable)
+
+        g.dblclick(()=>{
+            console.log("dbl")
+            let doc = prompt("Type Desired label", 
+                "Entity");
+                if (doc != null){
+                    entitylable.attr({
+                        text:doc,
+                    });
+                }
+            
+        });
+        return g
         
     }
     // Create Process Shape
@@ -50,7 +63,7 @@ onload = function () {
         });
         processlable.attr({
             'font-size':20,
-            text:"Process"
+            text:""
         });
     
         return s.g(process,processlable)
@@ -69,7 +82,7 @@ onload = function () {
         });
         lb.attr({
             'font-size':20,
-            text:"Data Store"
+            text:""
         });
     
         return s.g(shp,lb)
