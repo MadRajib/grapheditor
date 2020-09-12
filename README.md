@@ -46,8 +46,9 @@ which is called by the browser when our whole document is loaded!.<br>
     ```javascript
     var s = Snap("#svg");
     ```
-    we will use __s__ object to draw elements to html. And __#svg__ is the<br>elemnt where we will draw the shapes.
-
+    we will use __s__ object to draw elements to html. And __#svg__ is the<br>elemnt(Drawing area) where we will draw the shapes.
+    
+    Here the drawing area is a svg image with width and height 1200 and 700 respectively.
     ```html
     <svg id='svg' class='img-responsive' viewBox="0 0 1200 700">
 
